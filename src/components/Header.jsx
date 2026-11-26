@@ -4,6 +4,8 @@ import {
   Columns3, 
   LayoutGrid, 
   Smartphone, 
+  FileCode2,
+  MousePointerClick,
   Trophy, 
   BookOpen, 
   Sparkles 
@@ -19,7 +21,9 @@ export default function Header({
     { id: 'flex', label: '2. CSS Flexbox', icon: Columns3, color: 'text-sky-600', activeBg: 'bg-sky-50 text-sky-800 border-sky-300' },
     { id: 'grid', label: '3. CSS Grid', icon: LayoutGrid, color: 'text-emerald-600', activeBg: 'bg-emerald-50 text-emerald-800 border-emerald-300' },
     { id: 'mediaquery', label: '4. Media Query', icon: Smartphone, color: 'text-pink-600', activeBg: 'bg-pink-50 text-pink-800 border-pink-300' },
-    { id: 'challenges', label: '5. Tantangan & Kuis', icon: Trophy, color: 'text-amber-600', activeBg: 'bg-amber-50 text-amber-800 border-amber-300' },
+    { id: 'js', label: '5. Javascript', icon: FileCode2, color: 'text-amber-600', activeBg: 'bg-amber-50 text-amber-800 border-amber-300' },
+    { id: 'domevents', label: '6. DOM & Events', icon: MousePointerClick, color: 'text-cyan-600', activeBg: 'bg-cyan-50 text-cyan-800 border-cyan-300' },
+    { id: 'challenges', label: '7. Tantangan & Kuis', icon: Trophy, color: 'text-violet-600', activeBg: 'bg-violet-50 text-violet-800 border-violet-300' },
   ];
 
   return (

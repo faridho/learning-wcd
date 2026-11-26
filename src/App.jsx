@@ -4,6 +4,8 @@ import BasicCssGuide from './components/BasicCssGuide';
 import FlexboxGuide from './components/FlexboxGuide';
 import GridGuide from './components/GridGuide';
 import MediaQueryGuide from './components/MediaQueryGuide';
+import JsGuide from './components/JsGuide';
+import DomEventsGuide from './components/DomEventsGuide';
 import ChallengeSection from './components/ChallengeSection';
 import CheatsheetModal from './components/CheatsheetModal';
 import { LESSONS_DATA } from './data/lessonsData';
@@ -70,9 +72,25 @@ export default function App() {
               Media Query
             </button>
             <button
+              onClick={() => setActiveTab('js')}
+              className={`px-3 py-1.5 rounded-lg text-[11px] font-semibold transition ${
+                activeTab === 'js' ? 'bg-amber-100 text-amber-800' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+              }`}
+            >
+              Javascript
+            </button>
+            <button
+              onClick={() => setActiveTab('domevents')}
+              className={`px-3 py-1.5 rounded-lg text-[11px] font-semibold transition ${
+                activeTab === 'domevents' ? 'bg-cyan-100 text-cyan-800' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+              }`}
+            >
+              DOM &amp; Events
+            </button>
+            <button
               onClick={() => setActiveTab('challenges')}
               className={`px-3 py-1.5 rounded-lg text-[11px] font-semibold transition ${
-                activeTab === 'challenges' ? 'bg-amber-100 text-amber-800' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                activeTab === 'challenges' ? 'bg-violet-100 text-violet-800' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
               }`}
             >
               Kuis / Misi
@@ -86,6 +104,8 @@ export default function App() {
           {activeTab === 'flex' && <FlexboxGuide lessonData={LESSONS_DATA.flex} />}
           {activeTab === 'grid' && <GridGuide lessonData={LESSONS_DATA.grid} />}
           {activeTab === 'mediaquery' && <MediaQueryGuide lessonData={LESSONS_DATA.mediaquery} />}
+          {activeTab === 'js' && <JsGuide />}
+          {activeTab === 'domevents' && <DomEventsGuide />}
           {activeTab === 'challenges' && <ChallengeSection />}
         </div>
       </main>
